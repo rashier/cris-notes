@@ -15,7 +15,7 @@ document.querySelector("#app").innerHTML = `
           </div>
           <h1 class="text-white">Your Notes</h1>
           <hr>
-          <div id="notes" class="row"></div>
+          <div id="notes" class="row row-cols-1 row-cols-md-4 g-3"></div>
       </div>
   `;
 

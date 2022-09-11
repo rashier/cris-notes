@@ -12,14 +12,16 @@ export function showNotes(notesObj) {
 
   notesObj.forEach(function(element, index) {
     html += `
-              <div class="col-3 card p-0 ">
-                <h5 class="card-header">Note ${index + 1}</h5>
-                <div id="noteInfo" class="card-body">
-                  <p class="card-text">${element}</p>
-                  <button name="note" id="${index}" class="btn btn-danger">Delete Note</button>
-                </div>
-                <div class="card-footer text-muted text-center">
-                  Created on ${new Date().toLocaleDateString().replaceAll('/', '-')}
+              <div class="col">
+                <div class="card h-100">
+                  <h5 class="card-header">Note ${index + 1}</h5>
+                  <div id="noteInfo" class="card-body d-flex flex-column align-content-between">
+                    <p class="card-text">${element}</p>
+                    <button name="note" id="${index}" class="col-6 col-md-8 align-self-center btn btn-danger">Delete Note</button>
+                  </div>
+                  <div class="card-footer text-muted text-center">
+                    Created on ${new Date().toLocaleDateString().replaceAll('/', '-')}
+                  </div>
                 </div>
               </div>
             `
